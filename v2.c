@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
+
 #define N 10
 
 
@@ -34,34 +34,41 @@ struct pion {
 };
 
  char caseblanche;
- caseblanche=300; // c'est 
+ caseblanche=219; 
 
-printf ("                              --JEU DU TRAVERSE--\n \n \n");
+ char i;
+
+
+printf ("                              --JEU DE TRAVERSE--\n \n \n");
 
  
   
-for (l = 0 ; l<largeur-1 ; l++){         //double boucle pour crée la forme du plateau
-   
-       for (c = 0 ; c<hauteur-1 ; c++){
+for (l = 0 ; l<largeur ; l++){         //double boucle pour crée la forme du plateau
+       for (c = 0 ; c<hauteur ; c++){
        
             plat[l][c]=(l+c)%2 ; // cela alterne entre les cases noir et blanche
        }
-  }
+
+       
+}
  
  
-  for (l = 0 ; l<largeur-1 ; l++){
+  for (l = 0 ; l<largeur ; l++){
   
-       for (c = 0 ; c<hauteur-1 ; c++){
+       for (c = 0 ; c<hauteur ; c++){
        
         if (plat[l][c]==0){
             
-            printf(" ");} // espace pour les cases noires }
+            printf("   ");} // espace pour les cases noires }
             
             else{
             
-            printf("%c", caseblanche); }  
+            printf("%c%c%c", caseblanche,caseblanche,caseblanche); }  
             
        }
+       printf("  %d", l+1);
        printf("\n");
   }
+  printf("\n");
+ printf(" A   B  C  D  E  F  G  H  I  J ");
 }
